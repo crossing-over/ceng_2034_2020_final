@@ -35,7 +35,7 @@ def download_file(url, file_name = None):
     
     file = str(uuid.uuid4())
     open(file, 'wb').write(r.content)
-    #print("The file is downloaded",i)
+    print("The file is downloaded",i)
 
 if (pid == 0):
     for i in urls:
