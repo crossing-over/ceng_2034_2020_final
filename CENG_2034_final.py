@@ -23,7 +23,7 @@ if (pid >0):
 if(pid == 0):
     print("Child process pid is:", os.getpid())
 if (pid < 0):
-    print("There is unexpected thing when creating child process!")
+    print("The operation couldn't be completed!")
 
 
 #2
