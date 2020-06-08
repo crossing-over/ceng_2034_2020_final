@@ -1,0 +1,113 @@
+\documentclass[onecolumn]{article}
+%\usepackage{url}
+%\usepackage{algorithmic}
+\usepackage[a4paper]{geometry}
+\usepackage{datetime}
+\usepackage[margin=2em, font=small,labelfont=it]{caption}
+\usepackage{graphicx}
+\usepackage{mathpazo} % use palatino
+\usepackage[scaled]{helvet} % helvetica
+\usepackage{microtype}
+\usepackage{amsmath}
+\usepackage{subfigure}
+\usepackage{hyperref}
+% Letterspacing macros
+\newcommand{\spacecaps}[1]{\textls[200]{\MakeUppercase{#1}}}
+\newcommand{\spacesc}[1]{\textls[50]{\textsc{\MakeLowercase{#1}}}}
+
+\title{\spacecaps{Assignment Report 1: Process and Thread Implementation}\\ \normalsize \spacesc{CENG2034, Operating Systems} }
+
+\author{Cansel Hatice Kucukyilmaz\\canselhaticekucukyilmaz@posta.mu.edu.tr \\ \url{https://github.com/crossing-over/ceng_2034_2020_final}}
+
+
+
+%\date{\today\\\currenttime}
+\date{\today}
+
+\begin{document}
+
+
+\maketitle
+
+\begin{abstract}
+\hspace In this project we have seen how to create child process and how to use the child process using getpid () command. I learned how to avoid orphan process using the syscall feature. Next, tried to find out if the downloaded images were duplicated using the hashlib library. Using multiprocessing, we have seen how we can use whole kernels.
+\end{abstract}
+
+
+\section{Introduction}
+\hspace The purpose of this project is that understand how to create child process and multiprocessing execute.
+
+\section{Assignments}
+2.1 
+Using the fork function created new child process and with sys call function print its PID and the parent PID.
+
+
+2.2
+Firstly, I   created a function which is name download_file. In this function we using the request module to allows us to send HTTP requests using Python. The HTTP request returns a Response Object with all the response data. After that, we want to assign a name the file different from each other. So, we use the UUID(Universal Unique Identifier) module which is a python library which helps to generate the random id. Than, We check if the pid is equal to zero this means its a child process-. Using child process and download_file function, downloaded the urls in the  urls array.
+
+2.3
+Sometimes the parent process may die before the child process ends. If the parent process dies before the child process, then the child process is inherited by the orphan process. In this case, the child process can get out of control. To avoid this situation, it is provided to wait for the child process of the parent process by using the os.wait () function.
+
+
+2.4
+Using python hashlib library  we check the  images which  isone step earlier  downloaded. if there is any duplicate files using the the download_file function we try to remove the duplicate files, in this step we use multiprocessing, A process pool object was created to control the pool of worker processes to which transactions can be sent, and a parallel map application was made. Thus, the cores were used more efficiently.
+
+
+
+
+\section{Results1}
+
+1.1
+Printing child process id:
+Using the    fork() is an operation whereby a process creates a copy of itself. Ant with getpid() returns the process ID (PID) of the calling process.
+
+
+\begin{picture}(-5,0)(2.5,0)
+\put(15,-45.0468){\includegraphics[width=\linewidth]{first.png}}
+\end{picture}
+
+\begin{picture}(-5,0)(2.5,0)
+\put(15,-90.0468){\includegraphics[width=\linewidth]{secong.png}}
+\end{picture}
+2.2
+Firstly, I   created a function which is name download\verb_file. In this function we using the request module to allows us to send HTTP requests using Python. The HTTP request returns a Response Object with all the response data. After that, we want to assign a name the file different from each other. So, we use the UUID(Universal Unique Identifier) module which is a python library which helps to generate the random id. Than, We check if the pid is equal to zero this means its a child process-. Using child process and download_file function, downloaded the urls in the  urls array.
+
+\begin{picture}(-5,0)(2.5,0)
+\put(15,-190.0468){\includegraphics[width=\linewidth]{third.png}}
+\end{picture}
+
+
+2.3
+
+Avoiding Orphan Process
+In this part we check the process pid, if pid is equal to zero(child process).We wait to finish the child process.
+\begin{picture}(-5,0)(2.5,0)
+\put(15,-200.0468){\includegraphics[width=\linewidth]{third.png}}
+\end{picture}
+
+
+
+
+\section{Conclusion}
+Conclusion:
+In this project, a process pid was found using some commands using the os module in linux operating system and Python. Also, by creating a subprocess-this technique pertains to multitasking operating systems, and is sometimes called a subprocess or traditionally a subtask- parallel work was done.
+By using the os.wait () command, the parent process is prevented from dying before the child and the orphan process situation is avoided.
+While downloading images using the download_file function, id is assigned for each image using the uuid module.
+Next, I tried to find out if the downloaded images were duplicated using the hash library. Also, Using multiprocessing, we have seen how we can use whole kernels more effectively.
+
+\begin{picture}(-5,0)(2.5,0)
+\put(15,-200.0468){\includegraphics[width=\linewidth]{third.png}}
+\end{conc.png}
+
+
+
+
+
+\nocite{*}
+\bibliographystyle{plain}
+\bibliography{references}
+\end{document}
+
+
+
+
