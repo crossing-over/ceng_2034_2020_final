@@ -64,8 +64,7 @@ os.wait()
             #with open(filepath, "rb") as file:,
             #file_hash = md5(f.read()).hexdigest()
             #duplicates.append(index,hash_keys[file_hash])
-    #for i in duplicates:
-        #os.remove(i)
+  
 
 #with pool(4) as p:
     #for i in urls:
